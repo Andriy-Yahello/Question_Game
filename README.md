@@ -1,0 +1,1 @@
+In this app, you can choose 1 of 5 questions and make your choice. Each selection shows you related options. All your answers are dynamically stored below.  You can see correct answers after you have chosen all the answers. To see correct answers click submit button.
