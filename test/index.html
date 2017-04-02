@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html ng-app="QuestionApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Game</title>
+	<meta charset="utf-8" />
+    <script src="Libraries/angular.js"></script>
+    <link href="Libraries/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Libraries/bootstrap.css" rel="stylesheet" />
+
+    <script src="app.js"></script>
+</head>
+<body ng-controller="QuestionCtrl">
+    <div class="container">
+        <h1> A Question Game</h1>
+        <input type="radio" ng-model="quest.name" value="1">{{questions[0].display}} <br>
+        <input type="radio" ng-model="quest.name" value="2">{{questions[1].display}} <br>
+        <input type="radio" ng-model="quest.name" value="3">{{questions[2].display}} <br>
+        <input type="radio" ng-model="quest.name" value="4">{{questions[3].display}} <br>
+        <input type="radio" ng-model="quest.name" value="5">{{questions[4].display}} <br>
+
+
+
+        <div ng-switch on="quest.name" style="margin-top:20px;">
+
+            <div class="list-group" ng-switch-when="1">
+                <input type="radio" ng-model="choice.a" value="11">{{options[0].a1}}<br>
+                <input type="radio" ng-model="choice.a" value="12">{{options[0].a2}}<br>
+                <input type="radio" ng-model="choice.a" value="13">{{options[0].a3}}<br>
+                <input type="radio" ng-model="choice.a" value="14">{{options[0].a4}}<br>
+            </div>
+
+            <div class="list-group" ng-switch-when="2">
+                <input type="radio" ng-model="choice.b" value="21">{{options[1].a1}}<br>
+                <input type="radio" ng-model="choice.b" value="22">{{options[1].a2}}<br>
+                <input type="radio" ng-model="choice.b" value="23">{{options[1].a3}}<br>
+                <input type="radio" ng-model="choice.b" value="24">{{options[1].a4}}<br>
+            </div>
+
+            <div class="list-group" ng-switch-when="3">
+                <input type="radio" ng-model="choice.c" value="31">{{options[2].a1}}<br>
+                <input type="radio" ng-model="choice.c" value="32">{{options[2].a2}}<br>
+                <input type="radio" ng-model="choice.c" value="33">{{options[2].a3}}<br>
+                <input type="radio" ng-model="choice.c" value="34">{{options[2].a4}}<br>
+            </div>
+
+            <div class="list-group" ng-switch-when="4">
+                <input type="radio" ng-model="choice.d" value="41">{{options[3].a1}}<br>
+                <input type="radio" ng-model="choice.d" value="42">{{options[3].a2}}<br>
+                <input type="radio" ng-model="choice.d" value="43">{{options[3].a3}}<br>
+                <input type="radio" ng-model="choice.d" value="44">{{options[3].a4}}<br>
+            </div>
+
+            <div class="list-group" ng-switch-when="5">
+                <input type="radio" ng-model="choice.e" value="51">{{options[4].a1}}<br>
+                <input type="radio" ng-model="choice.e" value="52">{{options[4].a2}}<br>
+                <input type="radio" ng-model="choice.e" value="53">{{options[4].a3}}<br>
+                <input type="radio" ng-model="choice.e" value="54">{{options[4].a4}}<br>
+            </div>
+
+        </div>
+
+        <div>
+
+            <table>
+                <thead>
+                    <tr class="row grid-row">
+                        <th class="col-sm-2">Choice 1</th>
+                        <th class="col-sm-2">Choice 2</th>
+                        <th class="col-sm-2">Choice 3</th>
+                        <th class="col-sm-2">Choice 4</th>
+                        <th class="col-sm-4">Choice 5</th>
+                    </tr>
+
+                </thead>
+                <tr class="row grid-row">
+                    <td class="col-sm-2" ng-switch on="choice.a" style="margin-top:20px;">
+                        <div class="list-group" ng-switch-when="11">{{options[0].a1}}</div>
+                        <div class="list-group" ng-switch-when="12">{{options[0].a2}}</div>
+                        <div class="list-group" ng-switch-when="13">{{options[0].a3}}</div>
+                        <div class="list-group" ng-switch-when="14">{{options[0].a4}}</div>
+                    </td>
+
+                    <td class="col-sm-2" ng-switch on="choice.b" style="margin-top:20px;">
+                        <div class="list-group" ng-switch-when="21">{{options[1].a1}}</div>
+                        <div class="list-group" ng-switch-when="22">{{options[1].a2}}</div>
+                        <div class="list-group" ng-switch-when="23">{{options[1].a3}}</div>
+                        <div class="list-group" ng-switch-when="24">{{options[1].a4}}</div>
+                    </td>
+
+                    <td class="col-sm-2" ng-switch on="choice.c" style="margin-top:20px;">
+                        <div class="list-group" ng-switch-when="31">{{options[2].a1}}</div>
+                        <div class="list-group" ng-switch-when="32">{{options[2].a2}}</div>
+                        <div class="list-group" ng-switch-when="33">{{options[2].a3}}</div>
+                        <div class="list-group" ng-switch-when="34">{{options[2].a4}}</div>
+                    </td>
+
+                    <td class="col-sm-2" ng-switch on="choice.d" style="margin-top:20px;">
+                        <div class="list-group" ng-switch-when="41">{{options[3].a1}}</div>
+                        <div class="list-group" ng-switch-when="42">{{options[3].a2}}</div>
+                        <div class="list-group" ng-switch-when="43">{{options[3].a3}}</div>
+                        <div class="list-group" ng-switch-when="44">{{options[3].a4}}</div>
+                    </td>
+
+                    <td class="col-sm-4" ng-switch on="choice.e" style="margin-top:20px;">
+                        <div class="list-group" ng-switch-when="51">{{options[4].a1}}</div>
+                        <div class="list-group" ng-switch-when="52">{{options[4].a2}}</div>
+                        <div class="list-group" ng-switch-when="53">{{options[4].a3}}</div>
+                        <div class="list-group" ng-switch-when="54">{{options[4].a4}}</div>
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <button class="btn btn-default" ng-click="Show()">Submit</button>
+
+
+            <table>
+                <thead>
+                    <tr class="row grid-row">
+                        <th class="col-sm-2">{{answer1}}</th>
+                        <th class="col-sm-2">{{answer2}}</th>
+                        <th class="col-sm-2">{{answer3}}</th>
+                        <th class="col-sm-2">{{answer4}}</th>
+                        <th class="col-sm-4">{{answer5}}</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    <tr class="row grid-row">
+                        <td class="col-sm-2">{{star0}}</td>
+                        <td class="col-sm-2">{{star1}}</td>
+                        <td class="col-sm-2">{{star2}}</td>
+                        <td class="col-sm-2">{{star3}}</td>
+                        <td class="col-sm-2">{{star4}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </div>
+</body>
+</html>
